@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>The River</title>
+    <style>
+      /* Navbar CSS */
+      header {
+        width: 100%;
+        height: 80px;
+        background-color: black;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 0 20px;
+      }
+
+      .nav-river-heading {
+        padding-left: 40px;
+      }
+
+      nav div:first-child p {
+        font-size: 24px;
+        font-weight: 800;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 8px 15px;
+      }
+
+      .nav-river-heading p:hover {
+        background-color: #444;
+        color: #ffa37b;
+        cursor: pointer;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+        font-size: 20px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #ffa37b;
+      }
+
+      .nav-number-btn {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        margin-right: 15px;
+        border: 1px solid none;
+        background-color: #ffa37b;
+        padding: 15px 19px;
+        cursor: pointer;
+      }
+
+      .nav-booking-btn {
+        text-decoration: none;
+        color: #fff;
+        background-color: #ffa37b;
+        font-size: 16px;
+        margin-right: 15px;
+        border: none;
+        padding: 15px 19px;
+        cursor: pointer;
+      }
+
+      .nav-booking-btn:hover,
+      .nav-number-btn:hover {
+        background-color: #444;
+        color: #ffa37b;
+      }
+
+      /* Section 01 */
+
+      .section-01 {
+        height: 100%;
+        width: 100%;
+        background-image: url("./assets/image/bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+
+      .sec-one-center {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        position: relative;
+      }
+
+      .sec-one-heading h1 {
+        font-size: 100px;
+        margin-bottom: 20px;
+        font-family: "Arial", sans-serif;
+        text-transform: capitalize;
+      }
+
+      .sec-one-input {
+        display: flex;
+        gap: 10px;
+      }
+
+      .input-date {
+        padding: 10px;
+        width: 210px;
+        font-size: 16px;
+        border: 2px solid #fff;
+        background-color: rgba(100, 100, 100, 0.8);
+        color: #fff;
+      }
+
+      .input-date::placeholder {
+        color: #fff;
+        font-size: small;
+        padding-left: 20px;
+      }
+
+      .input-text {
+        width: 20px;
+        padding: 2px;
+        font-size: 16px;
+        border: 2px solid #fff;
+        background-color: rgba(100, 100, 100, 0.8);
+        color: #fff;
+        width: 120px;
+      }
+
+      .input-text::placeholder {
+        color: #fff;
+        padding-left: 20px;
+        font-size: small;
+      }
+
+      .book-btn {
+        padding: 15px 35px;
+        font-size: 16px;
+        border: none;
+        background-color: #ffa37b;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      /* Section 02 */
+
+      .sec-two-main-cards {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 60px;
+        padding: 80px 0;
+        background: #fff;
+        margin-top: 120px;
+        text-align: center;
+      }
+
+      .sec-two-card {
+        max-width: 300px;
+        color: #333;
+      }
+
+      .sec-two-card .icon {
+        font-size: 60px;
+        color: #9a9a9a;
+      }
+
+      .sec-two-card h2 {
+        font-size: 35px;
+        font-weight: 400;
+        margin-bottom: 15px;
+        color: #222;
+        font-family: sans-serif;
+      }
+
+      .sec-two-card p {
+        font-size: 15px;
+        line-height: 1.4;
+        color: #666;
+      }
+
+      .sec-two-card:hover .icon {
+        color: #ffa37b;
+      }
+
+      /* Section 03  */
+
+      .sec-three-img {
+        margin-top: 120px;
+        display: block;
+        position: relative;
+        padding: 40px 0;
+        background: #f5f5f5;
+        padding: 1px;
+        margin-right: -3.9px;
+      }
+
+      .sec-three-img > img {
+        width: 25%;
+        height: 10%;
+        object-fit: cover;
+        margin-left: -3.5px;
+        cursor: pointer;
+      }
+
+      /* Section 04 */
+
+      .sec-four-main-div {
+        margin-top: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 70px 20px;
+        background: #fff;
+      }
+
+      .sec-four-div-content {
+        max-width: 600px;
+        color: #333;
+      }
+
+      .sec-four-div-content h2 {
+        font-size: 40px;
+        font-weight: 400;
+        margin-bottom: 15px;
+        color: #222;
+        font-family: sans-serif;
+      }
+
+      .sec-four-div-content p {
+        font-size: 15px;
+        line-height: 1.4;
+        color: #666;
+      }
+
+      .sec-four-div-img > img {
+        cursor: pointer;
+      }
+
+      /* Section 05 */
+
+      .sec-five-main-div {
+        margin-top: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 70px 20px;
+        background: #ebe9e7;
+        border-radius: 10px;
+        background-image: url(./assets/image/testimonials.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .sec-five-div-one:hover,
+      .sec-five-div-two:hover,
+      .sec-five-div-three:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background-color: #444;
+        color: #ffa37b;
+        cursor: pointer;
+      }
+
+      .sec-five-div {
+        display: flex;
+        gap: 30px;
+      }
+
+      .sec-five-div-one,
+      .sec-five-div-two,
+      .sec-five-div-three {
+        max-width: 300px;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        border-radius: 10px;
+      }
+
+      .sec-five-user-name {
+        font-family: sans-serif;
+        font-weight: 300;
+      }
+
+      .sec-five-heading {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .sec-five-div-one > h3:hover,
+      .sec-five-div-two > h3:hover,
+      .sec-five-div-three > h3:hover {
+        color: orangered;
+        cursor: pointer;
+      }
+
+      .sec-five-div-one p,
+      .sec-five-div-two p,
+      .sec-five-div-three p {
+        font-size: 15px;
+      }
+
+      .sec-five-div-one i,
+      .sec-five-div-two i,
+      .sec-five-div-three i {
+        color: rgba(216, 61, 5, 0.849);
+      }
+
+      .sec-five-div-one i:hover,
+      .sec-five-div-two i:hover,
+      .sec-five-div-three i:hover {
+        color: rgb(231, 217, 17);
+      }
+
+      .sec-five-div-one img,
+      .sec-five-div-two img,
+      .sec-five-div-three img {
+        width: 30%;
+        height: 30%;
+        border-radius: 50%;
+      }
+
+      /* Section 06  */
+
+      .sec-six-main-div-one > h2 {
+        text-align: center;
+        margin-top: 120px;
+        font-size: 300%;
+        font-weight: 500;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .sec-six-main-div-one > p {
+        text-align: center;
+        max-width: 800px;
+        margin: auto;
+        font-size: 15px;
+        color: #666;
+        line-height: 1.4;
+      }
+
+      .sec-six-main-div-two {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+        padding: 80px 0;
+        background-color: #fff;
+      }
+
+      .sec-six-card {
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 350px;
+        border-radius: 2px;
+        position: relative;
+      }
+
+      .sec-six-card-img {
+        position: relative;
+      }
+
+      .sec-six-card-img > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .sec-six-card-price {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background-color: #fff;
+        color: #333;
+        font-weight: 600;
+        padding: 6px 14px;
+        border-radius: 2px;
+        font-size: 15px;
+      }
+
+      .sec-six-card-info {
+        background-color: #f89d72;
+        text-align: center;
+        position: absolute;
+        bottom: 18px;
+        left: 15px;
+        width: 320px;
+        height: 65px;
+      }
+
+      .sec-six-card-info > h3 {
+        color: #fff;
+        font-weight: 600;
+        font-size: 18px;
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .sec-six-card:hover {
+        box-shadow: 0 4px 20px #666;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      /* Footer CSS */
+
+      footer {
+        background: #ebe9e7;
+        padding: 60px 0 30px;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        color: #333;
+        border-top: 1px solid #eee;
+      }
+
+      .footer-main-div {
+        width: 90%;
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .footer-main-heading {
+        width: 100%;
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        border: 2px solid #333;
+        display: inline;
+        padding: 8px 25px;
+        margin: 0px 10px;
+      }
+
+      .footer-main-heading:hover {
+        background-color: #444;
+        color: #ffa37b;
+        cursor: pointer;
+      }
+
+      .footer-main-date {
+        width: 100%;
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 40px;
+        margin-top: 20px;
+      }
+
+      .footer-main-date:hover {
+        color: #ffa37b;
+        cursor: pointer;
+      }
+
+      .footer-address,
+      .footer-reservation,
+      .footer-news-letter {
+        display: inline-block;
+        width: 30%;
+        min-width: 250px;
+        text-align: left;
+        margin: 10px;
+      }
+
+      .footer-address-heading,
+      .footer-reservation-heading,
+      .footer-news-heading {
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #222;
+      }
+
+      .footer-news-heading {
+        padding-bottom: 14px;
+      }
+
+      .footer-address-list ul,
+      .footer-reservation-list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-address-list li,
+      .footer-reservation-list li {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 5px;
+      }
+
+      .footer-news-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .footer-news-form input {
+        padding: 10px 15px;
+        border: none;
+        border-bottom: 1px solid #aaa;
+        font-size: 14px;
+      }
+
+      .footer-news-form button {
+        background-color: #ffa37b;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-weight: 600;
+        border-radius: 5px;
+      }
+
+      .footer-news-form button:hover {
+        background-color: #444;
+        color: #ffa37b;
+        cursor: pointer;
+      }
+
+      .footer-social-media {
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .footer-social-media img {
+        width: 80px;
+        margin: 10px;
+      }
+
+      .end-line {
+        border-bottom: 2px solid black;
+      }
+
+      .end-line:hover {
+        border-bottom: 2px solid orangered;
+        cursor: pointer;
+      }
+
+
+
+    
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <header>
+      <nav>
+        <div
+          class="nav-river-heading"
+        >
+          <p class="animate__animated animate__bounceInLeft"  style="animation-delay: .15s;">The River</p>
+        </div>
+        <ul>
+          <li><a class="animate__animated animate__fadeInDown" style="animation-delay:.25s" href="#home">Home</a></li>
+          <li><a class="animate__animated animate__fadeInDown" style="animation-delay:.35s" href="#about">About us</a></li>
+          <li><a class="animate__animated animate__fadeInDown" style="animation-delay:.45s" href="#room">Rooms</a></li>
+          <li><a class="animate__animated animate__fadeInDown" style="animation-delay:.55s" href="#blog">Blogs</a></li>
+          <li><a class="animate__animated animate__fadeInDown" style="animation-delay:.65s" href="#contact">Contact</a></li>
+        </ul>
+        <div>
+          <button class="nav-booking-btn animate__animated animate__fadeInUp" style="animation-delay:.8s">Book Online</button>
+          <button class="nav-number-btn  animate__animated animate__fadeInUp" style="animation-delay:1s">
+            <i class="fa-solid fa-phone"></i> +92 335 3949723
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- --------------------x--------------x-------------------x---------------------- -->
+
+    <!-- Section 01 -->
+
+    <div class="section-01">
+      <div class="sec-one-center">
+        <div class="sec-one-heading">
+          <h1 class="animate__animated animate__zoomIn" style="animation-delay:1.2s">A luxury stay</h1>
+        </div>
+        <div class="sec-one-input ">
+          <input class="input-date animate__animated animate__fadeInUp"style="animation-delay:1.4s" class="input-date" type="datetime" placeholder="Check in" />
+          <input class="input-date animate__animated animate__fadeInUp"style="animation-delay:1.55s" class="input-date" type="datetime" placeholder="Check out" />
+          <input class="input-date animate__animated animate__fadeInUp"style="animation-delay:1.7s" class="input-text" type="text" placeholder="Children" />
+          <input class="input-date animate__animated animate__fadeInUp"style="animation-delay:1.85s" class="input-text" type="text" placeholder="Room" />
+          <button class="nav-booking-btn book-btn animate__animated animate__pulse" style="animation-delay:2s">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------x--------------x-------------------x---------------------- -->
+
+    <!-- Section 02 -->
+
+    <section class="sec-two-main-cards">
+      <div class="sec-two-card animate__animated animate__fadeInUp" style="animation-delay:2.25s">
+        <i class="fa-solid fa-hotel icon"></i>
+        <h2>Fabulous Resort</h2>
+        <p>
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+          posuere cubilia Curae; Suspendisse nec faucibus velit. Quisque
+          eleifend orci ipsum, a bibendum.
+        </p>
+      </div>
+
+      <div
+        class="sec-two-card animate__animated animate__fadeInUp" style="animation-delay:2.5s"
+      >
+        <i class="fa-solid fa-water-ladder icon"></i>
+        <h2>Infinity Pool</h2>
+        <p>
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+          posuere cubilia Curae; Suspendisse nec faucibus velit. Quisque
+          eleifend orci ipsum, a bibendum.
+        </p>
+      </div>
+
+      <div
+        class="sec-two-card animate__animated animate__fadeInUp" style="animation-delay:2.75s"
+      >
+        <i class="fa-solid fa-umbrella-beach icon"></i>
+        <h2>Luxury Rooms</h2>
+        <p>
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+          posuere cubilia Curae; Suspendisse nec faucibus velit. Quisque
+          eleifend orci ipsum, a bibendum.
+        </p>
+      </div>
+    </section>
+
+    <!-- --------------------x--------------x-------------------x---------------------- -->
+
+    <!-- Section 03  -->
+
+    <div class="sec-three-img ">
+      <img  class="animate__animated animate__zoomIn" style="animation-delay:3s" src="./assets/image/gallery_1.jpg.webp" alt="image not found" />
+      <img  class="animate__animated animate__zoomIn" style="animation-delay:3.15s" src="./assets/image/gallery_2.jpg.webp" alt="image not found" />
+      <img  class="animate__animated animate__zoomIn" style="animation-delay:3.3s" src="./assets/image/gallery_3.jpg.webp" alt="image not found" />
+      <img  class="animate__animated animate__zoomIn" style="animation-delay:3.45s" src="./assets/image/gallery_4.jpg.webp" alt="image not found" />
+    </div>
+
+    <!-- --------------------x--------------x-------------------x---------------------- -->
+
+    <!-- Section 04  -->
+
+    <div class="sec-four-main-div ">
+      <div class="sec-four-div-content animate__animated animate__fadeInLeft" style="animation-delay:3.6s">
+        <h2 style="font-family: sans-serif">
+          The River / 10 years of excellence
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+          mollitia voluptatibus, hic provident itaque obcaecati, officiis
+          voluptatum porro nesciunt consectetur perspiciatis odio nam voluptates
+          sunt ducimus repellendus. Nostrum, facere aspernatur! Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Nulla modi ut, aspernatur
+          molestias expedita id at facilis, itaque amet eius vero harum est
+          dicta necessitatibus voluptatibus quasi consequatur repellendus ea.
+        </p>
+      </div>
+      <div class="sec-four-div-img">
+        <img class="animate__animated animate__fadeInRight" style="animation-delay:3.8s" src="./assets/image/about_1.png" alt="image not found" />
+        <img class="animate__animated animate__fadeInRight" style="animation-delay:4s" src="./assets/image/about_2.png" alt="image not found" />
+        <img class="animate__animated animate__fadeInRight" style="animation-delay:4.2s" src="./assets/image/about_3.png" alt="image not found" />
+      </div>
+    </div>
+
+    <!-- --------------------x--------------x-------------------x---------------------- -->
+
+    <!-- Section 05  -->
+
+    <div class="sec-five-main-div">
+      <div class="sec-five-div ">
+        <div class="sec-five-div-one animate__animated animate__fadeInUp" style="animation-delay:4.4s">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <br />
+          <h3 class="sec-five-heading">perfect stay</h3>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            officia facilis sint autem explicabo molestiae, praesentium ipsam
+            aliquid. Illum, vitae. Unde dolores quisquam aperiam at.
+          </p>
+          <br />
+          <img src="./assets/image/user_1.jpg" alt="image not found" />
+          <br />
+          <h3 class="sec-five-user-name">Sana G</h3>
+        </div>
+
+        <div class="sec-five-div-two animate__animated animate__fadeInUp" style="animation-delay:4.6s">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <br />
+          <h3 class="sec-five-heading">perfect stay</h3>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            officia facilis sint autem explicabo molestiae, praesentium ipsam
+            aliquid. Illum, vitae. Unde dolores quisquam aperiam at.
+          </p>
+          <br />
+          <img src="./assets/image/user_2.jpg" alt="image not found" />
+          <br />
+          <h3 class="sec-five-user-name">Ali G</h3>
+        </div>
+
+        <div class="sec-five-div-three animate__animated animate__fadeInUp" style="animation-delay:4.8s">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <br />
+          <h3 class="sec-five-heading">perfect stay</h3>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            officia facilis sint autem explicabo molestiae, praesentium ipsam
+            aliquid. Illum, vitae. Unde dolores quisquam aperiam at.
+          </p>
+          <br />
+          <img src="./assets/image/user_3.jpg" alt="image not found" />
+          <br />
+          <h3 class="sec-five-user-name">Amir G</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------x--------------x-------------------x---------------------- -->
+
+    <!-- Section 06  -->
+
+    <section>
+      <div class="sec-six-main-div-one">
+        <h2>Book a room</h2>
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officia
+          facilis sint autem explicabo molestiae, praesentium ipsam aliquid.
+          Illum, vitae. Unde dolores quisquam aperiam at. Lorem, ipsum dolor sit
+          amet consectetur adipisicing elit. Blanditiis ipsum, similique quam
+          illum impedit, hic eum dolor, nemo nostrum dolorem aperiam.
+          Perspiciatis commodi natus ab, laboriosam nisi enim quas quasi. Lorem
+          ipsum dolor sit
+        </p>
+      </div>
+    </section>
+
+    <section class="sec-six-main-div-two ">
+      <div class="sec-six-card animate__animated animate__fadeInUp" style="animation-delay:5s">
+        <div class="sec-six-card-img">
+          <img src="./assets/image/booking_1.jpg" alt="image not found" />
+          <span class="sec-six-card-price">$120/Night</span>
+        </div>
+        <div class="sec-six-card-info">
+          <h3>Family Room</h3>
+        </div>
+      </div>
+
+      <div class="sec-six-card animate__animated animate__fadeInUp" style="animation-delay:5.2s">
+        <div class="sec-six-card-img">
+          <img src="./assets/image/booking_2.jpg" alt="image not found" />
+          <span class="sec-six-card-price">$120/Night</span>
+        </div>
+        <div class="sec-six-card-info">
+          <h3>Deluxe Room</h3>
+        </div>
+      </div>
+
+      <div class="sec-six-card animate__animated animate__fadeInUp" style="animation-delay:5.4s">
+        <div class="sec-six-card-img">
+          <img src="./assets/image/booking_3.jpg" alt="image not found" />
+          <span class="sec-six-card-price">$120/Night</span>
+        </div>
+        <div class="sec-six-card-info">
+          <h3>Single Room</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------x--------------x-------------------x---------------------- -->
+
+    <!-- Section 07  -->
+
+    <!--     
+    <section class="sec-seven-main">
+
+        <div class="sec-seven-div">
+            <img src="./assets/image/blog_1.jpg" alt="image not found">
+            <button>oct-31-2025</button>
+            <br>
+            <h2>How to book your stay.</h2>
+        </div>
+
+        <div>
+            <img src="./assets/image/blog_2.jpg" alt="image not found">
+            <button>oct-31-2025</button>
+            <br>
+            <h2>10 restaurants in town.</h2>
+        </div>
+        
+        <div>
+            <img src="./assets/image/blog_3.jpg" alt="image not found">
+            <button>oct-31-2025</button>
+            <br>
+            <h2>A perfect wedding.</h2>
+        </div>
+    
+    </section> -->
+
+    <!-- --------------------x--------------x-------------------x---------------------- -->
+
+    <footer class="animate__animated animate__fadeInUp" style="animation-delay:5.6s">
+      <div class="footer-main-div">
+        <div class="footer-main-heading">The River</div>
+        <div class="footer-main-date">since 2025</div>
+
+        <div class="footer-address">
+          <div class="footer-address-heading">Our Address</div>
+          <div class="footer-address-list">
+            <ul>
+              <li>Beach str.345</li>
+              <li>67559 Miami</li>
+              <li>USA</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-reservation">
+          <div class="footer-reservation-heading">Reservations</div>
+          <div class="footer-reservation-list">
+            <ul>
+              <li>Tal: 0123456789</li>
+              <li>Fax: 9876543210</li>
+              <li>reservations@river.com</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-news-letter">
+          <div class="footer-news-heading">News Letter</div>
+          <br />
+          <form class="footer-news-form">
+            <input type="email" placeholder="Your email address" />
+            <button>Subscribe</button>
+          </form>
+        </div>
+
+        <div class="footer-social-media">
+          <img src="./assets/image/cert_1.png" alt="image not found" />
+          <img src="./assets/image/cert_2.png" alt="image not found" />
+        </div>
+      </div>
+    </footer>
+    <div class="end-line"></div>
+  </body>
+</html>
