@@ -13,7 +13,7 @@
     />
     <title>The River</title>
     <style>
-      /* Navbar CSS */
+      /* Navbar */
       header {
         width: 100%;
         height: 80px;
@@ -63,7 +63,6 @@
         text-decoration: none;
         color: #fff;
         font-size: 18px;
-        transition: color 0.3s;
       }
 
       nav ul li a:hover {
@@ -98,6 +97,8 @@
         color: #ffa37b;
       }
 
+      /* <!-- x ----------------------- x ---------------------------- x ----------------------------- x -------------------------- x ------------ --> */
+
       /* Section 01 */
 
       .section-01 {
@@ -122,6 +123,7 @@
         justify-content: center;
         gap: 30px;
         position: relative;
+        padding: 0 15px;
       }
 
       .sec-one-heading h1 {
@@ -129,6 +131,12 @@
         margin-bottom: 20px;
         font-family: "Arial", sans-serif;
         text-transform: capitalize;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+      }
+
+      .sec-one-heading h1:hover {
+        transform: scale(1.05);
       }
 
       .sec-one-input {
@@ -176,6 +184,8 @@
         cursor: pointer;
       }
 
+      /* <!-- x ----------------------- x ---------------------------- x ----------------------------- x -------------------------- x ------------ --> */
+
       /* Section 02 */
 
       .sec-two-main-cards {
@@ -217,6 +227,8 @@
         color: #ffa37b;
       }
 
+      /* <!-- x ----------------------- x ---------------------------- x ----------------------------- x -------------------------- x ------------ --> */
+
       /* Section 03  */
 
       .sec-three-img {
@@ -227,6 +239,7 @@
         background: #f5f5f5;
         padding: 1px;
         margin-right: -3.9px;
+        font-size: 0;
       }
 
       .sec-three-img > img {
@@ -236,6 +249,8 @@
         margin-left: -3.5px;
         cursor: pointer;
       }
+
+      /* <!-- x ----------------------- x ---------------------------- x ----------------------------- x -------------------------- x ------------ --> */
 
       /* Section 04 */
 
@@ -271,6 +286,8 @@
       .sec-four-div-img > img {
         cursor: pointer;
       }
+
+      /* <!-- x ----------------------- x ---------------------------- x ----------------------------- x -------------------------- x ------------ --> */
 
       /* Section 05 */
 
@@ -357,6 +374,8 @@
         border-radius: 50%;
       }
 
+      /* <!-- x ----------------------- x ---------------------------- x ----------------------------- x -------------------------- x ------------ --> */
+
       /* Section 06  */
 
       .sec-six-main-div-one > h2 {
@@ -440,6 +459,8 @@
         cursor: pointer;
         background-color: rgba(0, 0, 0, 0.2);
       }
+
+      /* <!-- x ----------------------- x ---------------------------- x ----------------------------- x -------------------------- x ------------ --> */
 
       /* Footer CSS */
 
@@ -566,7 +587,8 @@
       }
 
       .end-line {
-        border-bottom: 2px solid black;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+        height: auto;
       }
 
       .end-line:hover {
@@ -574,62 +596,542 @@
         cursor: pointer;
       }
 
+      /* <!-- x ----------------------- x ---------------------------- x ----------------------------- x -------------------------- x ------------ --> */
 
+      @media (max-width: 1024px) {
+        nav {
+          padding: 0 10px;
+        }
 
-    
+        .nav-river-heading {
+          padding-left: 10px;
+        }
+
+        nav ul {
+          gap: 20px;
+        }
+
+        .nav-booking-btn,
+        .nav-number-btn {
+          padding: 10px 12px;
+          font-size: 14px;
+        }
+
+        .sec-two-main-cards,
+        .sec-five-div,
+        .sec-six-main-div-two {
+          gap: 20px;
+          padding: 60px 20px;
+          align-items: stretch;
+        }
+
+        .sec-four-main-div {
+          gap: 20px;
+          padding: 50px 20px;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .sec-four-div-img {
+          text-align: center;
+        }
+
+        .footer-address,
+        .footer-reservation,
+        .footer-news-letter {
+          width: 45%;
+          margin: 10px 2.5%;
+        }
+
+        .footer-news-letter {
+          width: 90%;
+          margin: 20px auto 0;
+        }
+      }
+
+      /* <!-- x ----------------------- x ---------------------------- x ----------------------------- x -------------------------- x ------------ --> */
+
+      @media (max-width: 768px) {
+        header {
+          height: auto;
+        }
+
+        nav {
+          flex-direction: column;
+          height: auto;
+          padding: 10px;
+          gap: 10px;
+        }
+
+        .nav-river-heading {
+          padding-left: 0;
+        }
+
+        nav ul {
+          flex-direction: column;
+          gap: 10px;
+          align-items: center;
+          width: 100%;
+          padding: 0;
+        }
+
+        nav div:last-child {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          width: 90%;
+          align-items: center;
+        }
+
+        .nav-booking-btn,
+        .nav-number-btn {
+          width: 100%;
+          margin-right: 0;
+          text-align: center;
+        }
+
+        .section-01 {
+          padding-top: 250px;
+          height: auto;
+        }
+
+        .sec-one-center {
+          height: auto;
+          padding-bottom: 60px;
+        }
+
+        .sec-one-heading h1 {
+          font-size: 60px;
+          text-align: center;
+        }
+
+        .sec-one-input {
+          flex-direction: column;
+          width: 90%;
+          align-items: center;
+          gap: 15px;
+        }
+
+        .input-date,
+        .input-text {
+          width: 100%;
+          box-sizing: border-box;
+        }
+
+        .book-btn {
+          width: 100%;
+        }
+
+        .sec-two-main-cards,
+        .sec-three-img,
+        .sec-four-main-div,
+        .sec-five-main-div,
+        .sec-six-main-div-one > h2 {
+          margin-top: 60px;
+        }
+
+        .sec-two-main-cards {
+          flex-direction: column;
+          align-items: center;
+          padding: 40px 20px;
+        }
+
+        .sec-two-card {
+          max-width: 90%;
+        }
+
+        .sec-three-img {
+          padding: 0;
+          margin-right: 0;
+        }
+
+        .sec-three-img > img {
+          width: 50%;
+          margin: 0;
+        }
+
+        .sec-four-main-div {
+          text-align: center;
+        }
+
+        .sec-four-div-img > img {
+          max-width: 30%;
+          height: auto;
+        }
+
+        .sec-four-div-content h2 {
+          font-size: 30px;
+        }
+
+        .sec-four-div-content p {
+          text-align: left;
+        }
+
+        .sec-five-div {
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+        }
+
+        .sec-five-div-one,
+        .sec-five-div-two,
+        .sec-five-div-three {
+          max-width: 90%;
+        }
+
+        .sec-six-main-div-one > h2 {
+          font-size: 200%;
+        }
+
+        .sec-six-main-div-one > p {
+          width: 90%;
+          padding: 0 10px;
+        }
+
+        .sec-six-main-div-two {
+          flex-direction: column;
+          align-items: center;
+          padding: 40px 0;
+        }
+
+        .sec-six-card {
+          width: 90%;
+          max-width: 350px;
+        }
+
+        .sec-six-card-info {
+          width: auto;
+          left: 15px;
+          right: 15px;
+          bottom: 15px;
+          height: 55px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .sec-six-card-info > h3 {
+          font-size: 18px;
+        }
+
+        .footer-address,
+        .footer-reservation,
+        .footer-news-letter {
+          display: block;
+          width: 90%;
+          margin: 20px auto;
+          text-align: center;
+          min-width: unset;
+        }
+
+        .footer-address-list ul,
+        .footer-reservation-list ul {
+          text-align: center;
+        }
+
+        .footer-address-heading,
+        .footer-reservation-heading,
+        .footer-news-heading {
+          text-align: center;
+        }
+      }
+
+      /* <!-- x ----------------------- x ---------------------------- x ----------------------------- x -------------------------- x ------------ --> */
+
+      @media (max-width: 480px) {
+        .sec-one-heading h1 {
+          font-size: 42px;
+        }
+
+        .sec-two-card h2,
+        .sec-four-div-content h2 {
+          font-size: 24px;
+        }
+
+        .sec-six-main-div-one > h2 {
+          font-size: 150%;
+        }
+
+        .sec-three-img > img {
+          width: 100%;
+        }
+
+        .sec-four-div-img > img {
+          max-width: 80%;
+          display: block;
+          margin: 10px auto;
+        }
+
+        .footer-main-heading {
+          font-size: 1.5rem;
+          padding: 5px 15px;
+        }
+      }
+
+      /* <!-- x ----------------------- x ---------------------------- x ----------------------------- x -------------------------- x ------------ --> */
+
+      /* Transition or Animations */
+
+      /* Navbar */
+      .nav-river-heading p,
+      .nav-booking-btn,
+      .nav-number-btn {
+        transition: all 0.3s ease-in-out;
+      }
+
+      nav ul li a {
+        transition: color 0.3s ease-in-out;
+      }
+
+      .nav-river-heading p:hover,
+      .nav-booking-btn:hover,
+      .nav-number-btn:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Section 1 */
+      .book-btn {
+        transition: background-color 0.3s ease-in-out,
+          transform 0.3s ease-in-out;
+      }
+
+      .book-btn:hover {
+        background-color: #e9895c;
+        color: #fff7f0;
+        transform: scale(1.05);
+      }
+
+      /* Section 02 */
+      .sec-two-card {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .sec-two-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .sec-two-card .icon {
+        transition: color 0.3s ease-in-out;
+      }
+
+      /* Section 03 */
+      .sec-three-img > img {
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      }
+
+      .sec-three-img > img:hover {
+        transform: scale(1.05);
+        opacity: 0.8;
+      }
+
+      /* Section 04 */
+      .sec-four-div-img > img {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .sec-four-div-img > img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Section 05 */
+      .sec-five-div-one,
+      .sec-five-div-two,
+      .sec-five-div-three {
+        transition: all 0.3s ease-in-out;
+      }
+
+      .sec-five-div-one:hover,
+      .sec-five-div-two:hover,
+      .sec-five-div-three:hover {
+        transform: translateY(-10px);
+      }
+
+      .sec-five-div-one > h3,
+      .sec-five-div-two > h3,
+      .sec-five-div-three > h3,
+      .sec-five-div-one i,
+      .sec-five-div-two i,
+      .sec-five-div-three i {
+        transition: color 0.3s ease-in-out;
+      }
+
+      /* Section 06 */
+      .sec-six-card {
+        transition: all 0.3s ease-in-out;
+      }
+
+      .sec-six-card:hover {
+        transform: translateY(-10px);
+      }
+
+      /* Footer */
+      .footer-main-heading {
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+          border-color 0.3s ease-in-out;
+      }
+
+      .footer-main-date {
+        transition: color 0.3s ease-in-out;
+      }
+
+      .footer-news-form button {
+        transition: all 0.3s ease-in-out;
+      }
+
+      .footer-news-form button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .end-line {
+        transition: border-bottom-color 0.3s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
     </style>
   </head>
   <body>
-    <!-- Navbar -->
+    <!-- Header -->
 
     <header>
       <nav>
-        <div
-          class="nav-river-heading"
-        >
-          <p class="animate__animated animate__bounceInLeft"  style="animation-delay: .15s;">The River</p>
+        <div class="nav-river-heading">
+          <p
+            class="animate__animated animate__bounceInLeft"
+            style="animation-delay: 0.15s"
+          >
+            The River
+          </p>
         </div>
         <ul>
-          <li><a class="animate__animated animate__fadeInDown" style="animation-delay:.25s" href="#home">Home</a></li>
-          <li><a class="animate__animated animate__fadeInDown" style="animation-delay:.35s" href="#about">About us</a></li>
-          <li><a class="animate__animated animate__fadeInDown" style="animation-delay:.45s" href="#room">Rooms</a></li>
-          <li><a class="animate__animated animate__fadeInDown" style="animation-delay:.55s" href="#blog">Blogs</a></li>
-          <li><a class="animate__animated animate__fadeInDown" style="animation-delay:.65s" href="#contact">Contact</a></li>
+          <li>
+            <a
+              class="animate__animated animate__fadeInDown"
+              style="animation-delay: 0.25s"
+              href="#home"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="animate__animated animate__fadeInDown"
+              style="animation-delay: 0.35s"
+              href="#about"
+              >About us</a
+            >
+          </li>
+          <li>
+            <a
+              class="animate__animated animate__fadeInDown"
+              style="animation-delay: 0.45s"
+              href="#room"
+              >Rooms</a
+            >
+          </li>
+          <li>
+            <a
+              class="animate__animated animate__fadeInDown"
+              style="animation-delay: 0.55s"
+              href="#blog"
+              >Blogs</a
+            >
+          </li>
+          <li>
+            <a
+              class="animate__animated animate__fadeInDown"
+              style="animation-delay: 0.65s"
+              href="#contact"
+              >Contact</a
+            >
+          </li>
         </ul>
         <div>
-          <button class="nav-booking-btn animate__animated animate__fadeInUp" style="animation-delay:.8s">Book Online</button>
-          <button class="nav-number-btn  animate__animated animate__fadeInUp" style="animation-delay:1s">
+          <button
+            class="nav-booking-btn animate__animated animate__fadeInUp"
+            style="animation-delay: 0.8s"
+          >
+            Book Online
+          </button>
+          <button
+            class="nav-number-btn animate__animated animate__fadeInUp"
+            style="animation-delay: 1s"
+          >
             <i class="fa-solid fa-phone"></i> +92 335 3949723
           </button>
         </div>
       </nav>
     </header>
 
-    <!-- --------------------x--------------x-------------------x---------------------- -->
+    <!-- x ----------------------- x ---------------------------- x ----------------------------- x -------------------------- x ------------ -->
 
     <!-- Section 01 -->
 
     <div class="section-01">
       <div class="sec-one-center">
         <div class="sec-one-heading">
-          <h1 class="animate__animated animate__zoomIn" style="animation-delay:1.2s">A luxury stay</h1>
+          <h1
+            class="animate__animated animate__zoomIn"
+            style="animation-delay: 1.2s"
+          >
+            A luxury stay
+          </h1>
         </div>
-        <div class="sec-one-input ">
-          <input class="input-date animate__animated animate__fadeInUp"style="animation-delay:1.4s" class="input-date" type="datetime" placeholder="Check in" />
-          <input class="input-date animate__animated animate__fadeInUp"style="animation-delay:1.55s" class="input-date" type="datetime" placeholder="Check out" />
-          <input class="input-date animate__animated animate__fadeInUp"style="animation-delay:1.7s" class="input-text" type="text" placeholder="Children" />
-          <input class="input-date animate__animated animate__fadeInUp"style="animation-delay:1.85s" class="input-text" type="text" placeholder="Room" />
-          <button class="nav-booking-btn book-btn animate__animated animate__pulse" style="animation-delay:2s">Book Now</button>
+        <div class="sec-one-input">
+          <input
+            class="input-date animate__animated animate__fadeInUp"
+            style="animation-delay: 1.4s"
+            class="input-date"
+            type="datetime"
+            placeholder="Check in"
+          />
+          <input
+            class="input-date animate__animated animate__fadeInUp"
+            style="animation-delay: 1.55s"
+            class="input-date"
+            type="datetime"
+            placeholder="Check out"
+          />
+          <input
+            class="input-date animate__animated animate__fadeInUp"
+            style="animation-delay: 1.7s"
+            class="input-text"
+            type="text"
+            placeholder="Children"
+          />
+          <input
+            class="input-date animate__animated animate__fadeInUp"
+            style="animation-delay: 1.85s"
+            class="input-text"
+            type="text"
+            placeholder="Room"
+          />
+          <button
+            class="nav-booking-btn book-btn animate__animated animate__pulse"
+            style="animation-delay: 2s"
+          >
+            Book Now
+          </button>
         </div>
       </div>
     </div>
-
-    <!-- --------------------x--------------x-------------------x---------------------- -->
+    <!-- x ----------------------- x ---------------------------- x ----------------------------- x -------------------------- x ------------ -->
 
     <!-- Section 02 -->
 
     <section class="sec-two-main-cards">
-      <div class="sec-two-card animate__animated animate__fadeInUp" style="animation-delay:2.25s">
+      <div
+        class="sec-two-card animate__animated animate__fadeInUp"
+        style="animation-delay: 2.25s"
+      >
         <i class="fa-solid fa-hotel icon"></i>
         <h2>Fabulous Resort</h2>
         <p>
@@ -640,7 +1142,8 @@
       </div>
 
       <div
-        class="sec-two-card animate__animated animate__fadeInUp" style="animation-delay:2.5s"
+        class="sec-two-card animate__animated animate__fadeInUp"
+        style="animation-delay: 2.5s"
       >
         <i class="fa-solid fa-water-ladder icon"></i>
         <h2>Infinity Pool</h2>
@@ -652,7 +1155,8 @@
       </div>
 
       <div
-        class="sec-two-card animate__animated animate__fadeInUp" style="animation-delay:2.75s"
+        class="sec-two-card animate__animated animate__fadeInUp"
+        style="animation-delay: 2.75s"
       >
         <i class="fa-solid fa-umbrella-beach icon"></i>
         <h2>Luxury Rooms</h2>
@@ -663,24 +1167,45 @@
         </p>
       </div>
     </section>
+    <!-- x ----------------------- x ---------------------------- x ----------------------------- x -------------------------- x ------------ -->
 
-    <!-- --------------------x--------------x-------------------x---------------------- -->
+    <!-- Section 03 -->
 
-    <!-- Section 03  -->
-
-    <div class="sec-three-img ">
-      <img  class="animate__animated animate__zoomIn" style="animation-delay:3s" src="./assets/image/gallery_1.jpg.webp" alt="image not found" />
-      <img  class="animate__animated animate__zoomIn" style="animation-delay:3.15s" src="./assets/image/gallery_2.jpg.webp" alt="image not found" />
-      <img  class="animate__animated animate__zoomIn" style="animation-delay:3.3s" src="./assets/image/gallery_3.jpg.webp" alt="image not found" />
-      <img  class="animate__animated animate__zoomIn" style="animation-delay:3.45s" src="./assets/image/gallery_4.jpg.webp" alt="image not found" />
+    <div class="sec-three-img">
+      <img
+        class="animate__animated animate__zoomIn"
+        style="animation-delay: 3s"
+        src="./assets/image/gallery_1.jpg.webp"
+        alt="image not found"
+      />
+      <img
+        class="animate__animated animate__zoomIn"
+        style="animation-delay: 3.15s"
+        src="./assets/image/gallery_2.jpg.webp"
+        alt="image not found"
+      />
+      <img
+        class="animate__animated animate__zoomIn"
+        style="animation-delay: 3.3s"
+        src="./assets/image/gallery_3.jpg.webp"
+        alt="image not found"
+      />
+      <img
+        class="animate__animated animate__zoomIn"
+        style="animation-delay: 3.45s"
+        src="./assets/image/gallery_4.jpg.webp"
+        alt="image not found"
+      />
     </div>
+    <!-- x ----------------------- x ---------------------------- x ----------------------------- x -------------------------- x ------------ -->
 
-    <!-- --------------------x--------------x-------------------x---------------------- -->
+    <!-- Section 04 -->
 
-    <!-- Section 04  -->
-
-    <div class="sec-four-main-div ">
-      <div class="sec-four-div-content animate__animated animate__fadeInLeft" style="animation-delay:3.6s">
+    <div class="sec-four-main-div">
+      <div
+        class="sec-four-div-content animate__animated animate__fadeInLeft"
+        style="animation-delay: 3.6s"
+      >
         <h2 style="font-family: sans-serif">
           The River / 10 years of excellence
         </h2>
@@ -695,19 +1220,36 @@
         </p>
       </div>
       <div class="sec-four-div-img">
-        <img class="animate__animated animate__fadeInRight" style="animation-delay:3.8s" src="./assets/image/about_1.png" alt="image not found" />
-        <img class="animate__animated animate__fadeInRight" style="animation-delay:4s" src="./assets/image/about_2.png" alt="image not found" />
-        <img class="animate__animated animate__fadeInRight" style="animation-delay:4.2s" src="./assets/image/about_3.png" alt="image not found" />
+        <img
+          class="animate__animated animate__fadeInRight"
+          style="animation-delay: 3.8s"
+          src="./assets/image/about_1.png"
+          alt="image not found"
+        />
+        <img
+          class="animate__animated animate__fadeInRight"
+          style="animation-delay: 4s"
+          src="./assets/image/about_2.png"
+          alt="image not found"
+        />
+        <img
+          class="animate__animated animate__fadeInRight"
+          style="animation-delay: 4.2s"
+          src="./assets/image/about_3.png"
+          alt="image not found"
+        />
       </div>
     </div>
+    <!-- x ----------------------- x ---------------------------- x ----------------------------- x -------------------------- x ------------ -->
 
-    <!-- --------------------x--------------x-------------------x---------------------- -->
-
-    <!-- Section 05  -->
+    <!-- Section 05 -->
 
     <div class="sec-five-main-div">
-      <div class="sec-five-div ">
-        <div class="sec-five-div-one animate__animated animate__fadeInUp" style="animation-delay:4.4s">
+      <div class="sec-five-div">
+        <div
+          class="sec-five-div-one animate__animated animate__fadeInUp"
+          style="animation-delay: 4.4s"
+        >
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
@@ -727,7 +1269,10 @@
           <h3 class="sec-five-user-name">Sana G</h3>
         </div>
 
-        <div class="sec-five-div-two animate__animated animate__fadeInUp" style="animation-delay:4.6s">
+        <div
+          class="sec-five-div-two animate__animated animate__fadeInUp"
+          style="animation-delay: 4.6s"
+        >
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
@@ -747,7 +1292,10 @@
           <h3 class="sec-five-user-name">Ali G</h3>
         </div>
 
-        <div class="sec-five-div-three animate__animated animate__fadeInUp" style="animation-delay:4.8s">
+        <div
+          class="sec-five-div-three animate__animated animate__fadeInUp"
+          style="animation-delay: 4.8s"
+        >
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
@@ -768,10 +1316,9 @@
         </div>
       </div>
     </div>
+    <!-- x ----------------------- x ---------------------------- x ----------------------------- x -------------------------- x ------------ -->
 
-    <!-- --------------------x--------------x-------------------x---------------------- -->
-
-    <!-- Section 06  -->
+    <!-- Section 06 -->
 
     <section>
       <div class="sec-six-main-div-one">
@@ -789,8 +1336,11 @@
       </div>
     </section>
 
-    <section class="sec-six-main-div-two ">
-      <div class="sec-six-card animate__animated animate__fadeInUp" style="animation-delay:5s">
+    <section class="sec-six-main-div-two">
+      <div
+        class="sec-six-card animate__animated animate__fadeInUp"
+        style="animation-delay: 5s"
+      >
         <div class="sec-six-card-img">
           <img src="./assets/image/booking_1.jpg" alt="image not found" />
           <span class="sec-six-card-price">$120/Night</span>
@@ -800,7 +1350,10 @@
         </div>
       </div>
 
-      <div class="sec-six-card animate__animated animate__fadeInUp" style="animation-delay:5.2s">
+      <div
+        class="sec-six-card animate__animated animate__fadeInUp"
+        style="animation-delay: 5.2s"
+      >
         <div class="sec-six-card-img">
           <img src="./assets/image/booking_2.jpg" alt="image not found" />
           <span class="sec-six-card-price">$120/Night</span>
@@ -810,7 +1363,10 @@
         </div>
       </div>
 
-      <div class="sec-six-card animate__animated animate__fadeInUp" style="animation-delay:5.4s">
+      <div
+        class="sec-six-card animate__animated animate__fadeInUp"
+        style="animation-delay: 5.4s"
+      >
         <div class="sec-six-card-img">
           <img src="./assets/image/booking_3.jpg" alt="image not found" />
           <span class="sec-six-card-price">$120/Night</span>
@@ -820,40 +1376,14 @@
         </div>
       </div>
     </section>
+    <!-- x ----------------------- x ---------------------------- x ----------------------------- x -------------------------- x ------------ -->
 
-    <!-- --------------------x--------------x-------------------x---------------------- -->
+    <!-- Footer -->
 
-    <!-- Section 07  -->
-
-    <!--     
-    <section class="sec-seven-main">
-
-        <div class="sec-seven-div">
-            <img src="./assets/image/blog_1.jpg" alt="image not found">
-            <button>oct-31-2025</button>
-            <br>
-            <h2>How to book your stay.</h2>
-        </div>
-
-        <div>
-            <img src="./assets/image/blog_2.jpg" alt="image not found">
-            <button>oct-31-2025</button>
-            <br>
-            <h2>10 restaurants in town.</h2>
-        </div>
-        
-        <div>
-            <img src="./assets/image/blog_3.jpg" alt="image not found">
-            <button>oct-31-2025</button>
-            <br>
-            <h2>A perfect wedding.</h2>
-        </div>
-    
-    </section> -->
-
-    <!-- --------------------x--------------x-------------------x---------------------- -->
-
-    <footer class="animate__animated animate__fadeInUp" style="animation-delay:5.6s">
+    <footer
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 5.6s"
+    >
       <div class="footer-main-div">
         <div class="footer-main-heading">The River</div>
         <div class="footer-main-date">since 2025</div>
